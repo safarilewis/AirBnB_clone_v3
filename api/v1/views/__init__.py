@@ -1,11 +1,11 @@
-#!/usr/bin/python3
-"""init file"""
-from flask import Blueprint, render_template, abort
-app_views = Blueprint('app_views', __name__, url_prefix="/api/v1")
+from flask import Blueprint
+"""
+Blueprints module to register operaions
+on an application
+"""
+
+app_views = Blueprint('app_views', __name__, url_prefix='/api/v1')
 from api.v1.views.index import *
-from api.v1.views.states import *
-from api.v1.views.cities import *
-from api.v1.views.amenities import *
-from api.v1.views.users import *
-from api.v1.views.places_reviews import *
-from api.v1.views.places_reviews import *
+import api.v1.views.states
+import api.v1.views.cities
+import api.v1.views.amenities
