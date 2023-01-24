@@ -72,16 +72,8 @@ class FileStorage:
 
     def get(self, cls, id):
         """returns object based on its class and ID"""
-<<<<<<< HEAD
-        return models.FileStorage.all(cls).get(cls + '.' + id)
-
-    def count(self, cls=None):
-        """Returns objects in storage matching the given class """
-        return len(models.FileStorage.all(cls))
-=======
         return models.storage.all(cls).get(cls + '.' + id)
 
     def count(self, cls=None):
         """Returns objects in storage matching the given class """
         return len(models.storage.all(cls))
->>>>>>> parent of d6a8b80 (merging)
